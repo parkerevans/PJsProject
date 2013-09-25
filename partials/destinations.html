@@ -1,0 +1,38 @@
+<div class="pull-left col-lg-12">
+	<h3>Find and compare private jets flights</h3>
+	<form class="form-inline" role="form">
+		  <div class="form-group">
+		    <label class="sr-only" for="departureInput">Departure</label>
+		    <input type="text" class="form-control input-lg col-lg-3" id="departureInput" placeholder="From">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="destinationInput">Destination</label>
+		    <input type="text" class="form-control input-lg col-lg-3" id="destinationInput" placeholder="To">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="departureDateInput">Departure Date/Time</label>
+		    <input type="text" class="form-control input-lg col-lg-1" id="departureDateInput" placeholder="Depart">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="returnDateInput">Return Date/Time</label>
+		    <input type="text" class="form-control input-lg col-lg-1" id="returnDateInput" placeholder="Return">
+		  </div>
+		  <div class="form-group">
+		      <label class="sr-only" for="passengersInput">Number of Passengers</label>
+		      <select id="passengersInput" class="form-control input-lg col-lg-2">
+		        <option>1 Adult</option>
+		        <option>2 Adult</option>
+      		  </select>
+    	  </div>
+		  <button type="submit" class="btn btn-primary btn-default">Find Flights</button>
+	</form>
+	<ul>
+		<li ng-repeat="airport in airports">
+			<a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a>
+		</li>
+	</ul>
+
+</div>
+<!--
+<div class="col-md-5" ng-include src="sidebarURL"></div>
+-->

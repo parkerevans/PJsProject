@@ -1,0 +1,56 @@
+<html ng-app="pjs">
+<head>
+	<title>PJs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Old code for Bootstrap 2.3 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+	-->
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="home">
+	<section class="container" ng-controller="AppCtrl">
+		<div class="content row">
+			<header class="main col-lg-12">
+				<div class="pull-left col-lg-3">
+					<a class="branding" href="#"><h2>PJs Flights</h2></a>
+				</div> 
+				<div class="col-lg-9">
+					<ul class="nav nav-pills">
+						<li ng-class="destinationActive"><a href="#">Destinations</a></li>
+						<li ng-class="flightsActive"><a href="#/flights" ng-click="setActive('flights')">Flights</a></li>
+						<li ng-class="reservationsActive"><a href="#/reservations" ng-click="setActive('reservations')">Reservations</a></li>
+						<li ng-class="membershipsActive"><a href="#memberships" ng-click="setActive('memberships')">Memberships</a></li>
+						<li ng-class="dealsActive"><a href="#dailydeals" ng-click="setActive('dailydeals')">Daily Deals</a></li>
+						<li ng-class="myaccountActive"><a href="#myaccount" ng-click="setActive('myaccount')">My Account</a></li>
+						<li ng-class="loginActive"><a href="#login" ng-click="setActive('login')">Login</a></li>
+	
+					</ul>
+				</div>
+			</header> <!-- main -->
+			
+
+		</div><!-- content -->
+
+		<div class="row" ng-view></div> <!--Angular  Driven Content -->
+
+		<div class="content row footer">
+
+		</div><!--footer -->
+	</section><!-- container -->
+
+<!-- 	<div class="container" ng-controller="AppCtrl">
+		<section class="header">
+			<h1>AngulAir</h1>
+		</section>
+
+
+		<div ng-view></div>
+	</div> -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>	
+</body>
+</html>

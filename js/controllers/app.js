@@ -1,11 +1,11 @@
 function AppCtrl ($scope) {
 	
 	$scope.setActive = function (type) {
-    	$scope.destinationActive = '';
+    	$scope.destinationsActive = '';
     	$scope.flightsActive = '';
     	$scope.reservationsActive = '';
     	$scope.membershipsActive = '';
-    	$scope.dealsActive = '';
+    	$scope.dailydealsActive = '';
     	$scope.myaccountActive = '';
     	$scope.loginActive = '';
     	$scope[type + 'Active'] = 'active';
@@ -40,10 +40,8 @@ function AppCtrl ($scope) {
       ]
     }
   };
-  $scope.sidebarURL = 'partials/airport.html';
+  
+  $scope.searchFlights = 'partials/searchFlights.html';
   $scope.currentAirport = null;
 
-  $scope.setAirport = function (code) {
-    $scope.currentAirport = $scope.airports[code];
-  };
 }
